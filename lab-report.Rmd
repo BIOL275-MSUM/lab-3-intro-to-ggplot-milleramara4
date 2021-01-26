@@ -1,0 +1,77 @@
+---
+title: "Lab 3 Report"
+author: "___"
+date: "`r format(Sys.Date())`"
+output: github_document
+---
+
+## Instructions
+
+In each section below, create the appropriate graph and answer the questions. Replace any triple underscores \_\_\_ with your own text.
+
+Replace the \_\_\_'s in your README.
+
+Knit your README and this Lab Report.
+
+## Fireflies
+
+Male fireflies of the species *Photinus ignitus* attract females with pulses of light. Flashes of longer duration seem to attract the most females. During mating, the male transfers a spermatophore to the female. Besides containing sperm, the spermatophore is rich in protein that is distributed by the female to her fertilized eggs. The data below are measurements of spermatophore mass (in mg) of 35 males (Cratsley and Lewis 2003). This question comes from your textbook.
+
+The path to the data is "https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv"
+
+> A. Insert an R code chunk and create a graph depicting the frequency distribution of the 35 mass measurements. It should have legible text and appropriate axis labels.
+
+\_\_\_
+
+> B. What type of graph did you choose in part (A)? Why?
+
+\_\_\_
+
+> C. Describe the shape of the frequency distribution. What are its main features?
+
+\_\_\_
+
+> D. What term would be used to describe the largest measurement in the frequency distribution? You can refer to the lecture slides, your notes, or the textbook.
+
+\_\_\_
+
+## Bird orders
+
+The ebird_taxonomy dataset in the auk package is a simplified version of the taxonomy used by eBird. This taxonomy is based on the Clements Checklist. The dataset contains all known species of birds and their taxonomic order and family. The code below creates a new dataset named birds which consists of
+
+```{r}
+library(auk)                          # load the auk package
+birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
+  as_tibble() %>%                     # tibbles print better in the console
+  filter(category == "species")       # remove non-species taxa
+```
+
+> E. How many bird species are in the new birds dataset? How did you find out?
+
+\_\_\_
+
+> H. How many orders are there? You can get this right by counting on the graph, but you will only get full points if you use some code to figure it out.
+
+\_\_\_
+
+> F. Insert an R code chunk and create a graph depicting the distribution of orders in the birds dataset. Sort the orders with the most frequent on the left. It should have legible text and appropriate axis labels.
+
+\_\_\_
+
+> G. What kind of graph did you create? Why?
+
+\_\_\_
+
+## Links to peer review
+
+I reviewed \_\_\_'s lab report at this URL: \_\_\_
+
+\_\_\_ reviewed my lab report at this URL: \_\_\_
+
+## Session Info
+
+Here is my session information:
+
+```{r}
+sessioninfo::session_info()
+```
